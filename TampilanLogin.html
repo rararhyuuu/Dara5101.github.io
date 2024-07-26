@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(145deg, #b4c5d5, #d1dae4);
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            width: 600px;
+        }
+
+        .login-container img {
+            width: 250px;
+            margin-right: 20px;
+        }
+
+        .login-form h2 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .login-form label {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .login-form input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 9px;
+            background-color: #adc8e8;
+        }
+
+        .login-form button {
+            width: 40%;
+            padding: 10px;
+            background-color: #5d7f96;
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .login-form a {
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="iconlogin.png" alt="Login Icon">
+        <div class="login-form">
+            <h2><u>Login</u></h2>
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <center class="p-1" style="background-color: #adc8e8;">
+                <a href="TampilanDashbor.html" class="button" class="text-white">Login</a>
+            </center>
+            <center>
+                <a href="TampilanRegristrasi.html" <spam style="color: #000000;">Belum punya akun?</spam><span style="color: #007bff;"><u>Register</u></span></a>
+            </center>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #8E9EAB, #EEF2F3);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .container h1 {
+            margin: 0;
+            font-size: 24px;
+            margin: 0;
+            position: relative;
+        }
+
+        .container h1::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: black;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .container input[type="email"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 25px;
+            background-color: #90AFC5;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #336B87;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #2A3132;
+        }
+
+        .container .signin {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .container .signin a {
+            color: #336B87;
+            text-decoration: none;
+        }
+
+        .container .signin a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://via.placeholder.com/50" alt="Logo">
+        <h1>Register</h1>
+        <form>
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Re-password" required>
+            <button type="submit">REGISTER</button>
+        </form>
+        <div class="signin">
+            Sudah Punya akun? <a href="#">Sign in</a>
+        </div>
+    </div>
+</body>
+
+</html>

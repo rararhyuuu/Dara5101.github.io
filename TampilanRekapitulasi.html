@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekapitulasi Kehadiran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #c8c4dc;
+      color: #333;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #9b89b3;
+      position: fixed;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      color: white;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .submenu {
+      padding-left: 20px;
+    }
+
+    .submenu a {
+      color: white;
+      display: block;
+      padding: 5px 0;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #a093c7;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      margin: 0;
+      color: white;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: #a093c7;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      background-color: #c8c4dc;
+      color: #333;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      background-color: #6a5acd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #5a4cad;
+    }
+
+    .attendance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .attendance-table th {
+      background-color: #9b89b3;
+      color: white;
+    }
+
+    .attendance-table td {
+      background-color: #f2f0f7;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <canvas id="menuIcon" width="30" height="30"></canvas>
+    <ul>
+      <li><a href="#">Dasboard</a></li>
+      <li><a href="#">Jadwal</a></li>
+      <li><a href="#">Ujian</a></li>
+      <li><a href="#">Perkuliahan</a></li>
+      <li><a href="#">Presensi</a></li>
+      <li><a href="#">Rekapitulasi</a></li>
+      <li class="submenu">
+        <a href="#">Kehadiran</a>
+        <a href="#">Tugas</a>
+        <a href="#">Responsi UTS</a>
+        <a href="#">Responsi UAS</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <h1>Rekapitulasi Kehadiran</h1>
+      <input type="text" placeholder="Kelas">
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Download Ringkasan</button>
+    </div>
+    <table class="attendance-table">
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>NAMA</th>
+          <th>Hari Kehadiran</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Add rows here -->
+      </tbody>
+    </table>
+  </div><br>
+
+  <script>
+    // Draw the menu icon on the canvas
+    const canvas = document.getElementById('menuIcon');
+    const context = canvas.getContext('2d');
+
+    context.fillStyle = '#ffffff';
+    context.fillRect(0, 5, 30, 5);
+    context.fillRect(0, 15, 30, 5);
+    context.fillRect(0, 25, 30, 5);
+  </script>
+</body>
+
+</html>
